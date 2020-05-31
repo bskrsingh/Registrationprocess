@@ -55,8 +55,8 @@ onSubmit(e) {
       this.setState({
         userLog: this.userData.userLog,
         username: this.userData.username,
-          email: this.userData.email,
-          password: this.userData.password
+        email: this.userData.email,
+        password: this.userData.password
       });
   } else {
       this.setState({
@@ -69,6 +69,7 @@ onSubmit(e) {
 }
 
 componentWillUpdate(nextProps, nextState) {
+  debugger
   localStorage.setItem('user', JSON.stringify(nextState));
 }
 
